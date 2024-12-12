@@ -8,6 +8,21 @@ import UpdateUser from './UpdateUser'
 
 function App() {
 
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(process.env.REACT_APP_API_URL);
+        const data = await response.json();
+        setItems(data);
+      } catch (error) {
+        console.error("Error fetching items:", error);
+      }
+    };
+    fetchItems();
+  }, []);
+
   return (
     <>
       <BrowserRouter>
