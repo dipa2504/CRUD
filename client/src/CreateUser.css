@@ -1,13 +1,11 @@
-/* Container for the whole page */
 .update-container {
     display: flex;
     min-height: 100vh;
-    background-color: #007bff; /* Blue background */
+    background-color: #007bff; 
     justify-content: center;
     align-items: center;
   }
   
-  /* Container for the form */
   .form-container {
     width: 100%;
     max-width: 500px;
@@ -49,7 +47,6 @@
   }
   
   @media (max-width: 768px) {
-    /* Mobile responsiveness */
     .form-container {
       padding: 15px;
       width: 90%;

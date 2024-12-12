@@ -1,20 +1,19 @@
-/* General styling for the container */
 .users-container {
   display: flex;
   min-height: 100vh;
-  background-color: #f0f8ff; /* Lighter background */
+  background-color:  #007bff; 
   justify-content: center;
   align-items: center;
 }
 
-/* Container for the table */
+
 .table-container {
-  width: 70%; /* Adjusted width for better responsiveness */
+  width: 70%; 
   background-color: #fff;
   border-radius: 10px;
   padding: 20px 40px;
   overflow-x: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Table styles */
@@ -27,7 +26,7 @@
   padding: 10px;
   text-align: center;
   font-size: 14px;
-  border-bottom: 1px solid #ddd; /* Add line between rows */
+  border-bottom: 1px solid #ddd; 
 }
 
 .table th {
@@ -82,7 +81,6 @@
   outline: none;
 }
 
-/* For devices with width 888px and below */
 @media (max-width: 888px) {
   .table-container {
     width: 100%;
@@ -100,7 +98,6 @@
   }
 }
 
-/* For devices with width 650px and below */
 @media (max-width: 650px) {
   .table-container {
     width: 100%;

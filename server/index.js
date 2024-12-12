@@ -8,7 +8,8 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/crud', { useNewUrlParser: true, useUnifiedTopology: true })
+// mongoose.connect('mongodb://127.0.0.1:27017/crud', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://crud:12312312@cluster0.nlnym.mongodb.net/crud', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
@@ -74,6 +75,11 @@ app.delete('/deleteUser/:id', async (req, res) => {
 });
 
 // Start server
-app.listen(3001, () => {
-  console.log('Server is running on port 3001');
+// app.listen(3001, () => {
+//   console.log('Server is running on port 3001');
+// });
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
