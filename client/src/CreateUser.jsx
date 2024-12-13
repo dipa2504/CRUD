@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CreateUser.css';  
+import './CreateUser.css';  // Importing the CSS file for styles
 
 const CreateUser = () => {
   const navigate = useNavigate();
@@ -16,8 +16,8 @@ const CreateUser = () => {
       alert('Please fill out all fields.');
       return;
     }
-    // axios.post('http://localhost:3001/createUser', { name, email, age, mobile })
-    axios.post(`${process.env.REACT_APP_API_URL}/createUser`, { name, email, age, mobile })
+    axios.post('http://localhost:3001/createUser', { name, email, age, mobile })
+    // axios.post(`${process.env.REACT_APP_API_URL}/createUser`, { name, email, age, mobile })
       .then(() => navigate('/'))
       .catch(err => console.log(err));
   };

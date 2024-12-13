@@ -9,8 +9,7 @@ const Users = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // axios.get('http://localhost:3001')
-    axios.get(`${process.env.REACT_APP_API_URL}`)
+    axios.get('http://localhost:3001')
       .then(result => setUsers(result.data))
       .catch(err => setError(err.message))
       .finally(() => setLoading(false));
@@ -18,7 +17,6 @@ const Users = () => {
 
   const handleDelete = (id) => {
     axios.delete(`http://localhost:3001/deleteUser/${id}`)
-    axios.delete(`${process.env.REACT_APP_API_URL}/deleteUser/${id}`)
       .then(() => setUsers(users.filter(user => user._id !== id)))
       .catch(err => console.log(err));
   };
