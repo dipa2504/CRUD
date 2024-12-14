@@ -16,8 +16,8 @@ const CreateUser = () => {
       alert('Please fill out all fields.');
       return;
     }
-    axios.post('http://localhost:3001/createUser', { name, email, age, mobile })
-    // axios.post(`${process.env.REACT_APP_API_URL}/createUser`, { name, email, age, mobile })
+    // axios.post('http://localhost:3001/createUser', { name, email, age, mobile })
+    axios.post(`${process.env.REACT_APP_API_URL}/createUser`, { name, email, age, mobile })
       .then(() => navigate('/'))
       .catch(err => console.log(err));
   };
